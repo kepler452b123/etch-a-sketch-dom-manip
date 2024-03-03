@@ -1,8 +1,22 @@
-.square{
+.container{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    margin:0;
+}
 
+.square{
+    flex:auto;
+    border: 1px solid black;
+    margin:0;
+    height:6.25vh;
+    width:6.25vh;
 }
 
 .row{
-
+    display:flex;
+    flex: auto;
+    height:6.25vh;
+    margin:0;
 }
 
