@@ -7,10 +7,10 @@ generateGrid(dimensions);
 
 function generateGrid(dimension){
     for (let i = 0; i < dimension; i++){
-        const row = document.createElement("div");
+        let row = document.createElement("div");
         row.classList.add("row");
         for (let j = 0; j < dimension; j++){
-            const square = document.createElement("div");
+            let square = document.createElement("div");
             square.classList.add("square");
             square.addEventListener('mouseover', function (e) {
                 if (e.buttons === 1){
@@ -24,12 +24,8 @@ function generateGrid(dimension){
 }
 
 function clearGrid(){
-    const listRows = grid.getElementsByClassName("row");
-    for (row of listRows){
-        const listSquares = row.getElementsByClassName("square");
-        for (square of listSquares){
-            square.style.background = "white";
-        }
+    while (grid.firstChild){
+        grid.removeChild(grid.firstChild);
     }
 }
 
@@ -41,6 +37,7 @@ promptButton.addEventListener('click', () => {
 
 clearButton.addEventListener('click', () =>{
     clearGrid();
+    generateGrid(dimensions);
 })
 
 
