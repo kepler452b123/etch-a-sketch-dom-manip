@@ -3,20 +3,29 @@
     flex-direction:column;
     height:100vh;
     margin:0;
+    justify-content:center;
+}
+
+.title{
+    font-size:large;
+    font-weight:bold;
+    flex:none;
+}
+
+.grid{
+    display:flex;
+    flex-direction: column;
+    flex:1;
 }
 
 .square{
-    flex:auto;
+    flex:1;
     border: 1px solid black;
     margin:0;
-    height:6.25vh;
-    width:6.25vh;
 }
 
 .row{
     display:flex;
-    flex: auto;
-    height:6.25vh;
-    margin:0;
+    flex: 1;
 }
 
